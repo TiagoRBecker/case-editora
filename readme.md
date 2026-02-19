@@ -1,111 +1,167 @@
-📚 Editorial SaaS Ecosystem
+# 📚 Editorial SaaS Ecosystem
 
-Plataforma editorial completa composta por API central + 3 aplicações independentes:
+Plataforma editorial completa composta por **API central + 3 aplicações independentes**:
 
-👑 Admin (gestão estratégica)
-
-👥 Colaborador (produção editorial)
-
-🛍️ Cliente (consumo e compras)
+- 👑 Admin (gestão estratégica)
+- 👥 Colaborador (produção editorial)
+- 🛍️ Cliente (consumo e compras)
 
 Sistema desenvolvido para editora real, cobrindo todo o ciclo:
 
-gestão → produção → publicação → venda → acesso digital
+**gestão → produção → publicação → venda → acesso digital**
 
-🔒 Status do projeto
+---
+
+## 🔒 Status do projeto
 
 Projeto finalizado para cliente real, porém descontinuado antes do lançamento em produção.
 
 Por se tratar de software proprietário, o código-fonte não é público.
 
 📩 Recrutadores podem solicitar:
+- acesso ao repositório privado  
+- demonstração guiada  
+- apresentação técnica  
 
-acesso ao repositório privado
+---
 
-demonstração guiada
+# ⚙️ Backend API (Arquitetura Hexagonal)
 
-apresentação técnica da arquitetura
+API central construída em **Arquitetura Hexagonal (Ports & Adapters)**, com domínio isolado de frameworks.
 
-⚙️ Backend API (Arquitetura Hexagonal)
+**Responsabilidades principais:**
 
-API central construída em Arquitetura Hexagonal (Ports & Adapters), com domínio isolado de frameworks.
-
-Principais responsabilidades:
-
-autenticação e RBAC
-
-gestão editorial
-
-publicações digitais
-
-vendas e acesso do cliente
-
-integração entre aplicações
+- autenticação e RBAC  
+- gestão editorial  
+- publicações digitais  
+- vendas e acesso do cliente  
+- integração entre aplicações  
 
 Tecnologias: Node.js, TypeScript, Prisma, Redis, Tsyringe.
 
-🏗️ Estrutura
+### 🏗️ Estrutura e Arquitetura
 
-<div align="center"> <img src="assets/editora/api/1.png" width="300"> <img src="assets/editora/api/2.png" width="300"> <img src="assets/editora/api/3.png" width="300"> <img src="assets/editora/api/4.png" width="300"> </div>
-🛡️ Infraestrutura & DevOps
+<table>
+  <tr>
+    <td align="center"><img src="assets/editora/api/1.png" height="220"></td>
+    <td align="center"><img src="assets/editora/api/2.png" height="220"></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/editora/api/3.png" height="220"></td>
+    <td align="center"><img src="assets/editora/api/4.png" height="220"></td>
+  </tr>
+</table>
+
+---
+
+# 🛡️ Infraestrutura & DevOps
 
 Ecossistema totalmente containerizado com Docker e orquestrado via Docker Compose.
 
-Ambiente:
+**Ambiente:**
 
-VPS Linux
+- VPS Linux  
+- Nginx reverse proxy  
+- SSL  
+- containers isolados  
+- deploy full-cycle  
 
-Nginx reverse proxy
+<table>
+  <tr>
+    <td align="center"><img src="assets/editora/infra/1.png" height="200"></td>
+    <td align="center"><img src="assets/editora/infra/2.png" height="200"></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/editora/infra/3.png" height="200"></td>
+    <td align="center"><img src="assets/editora/infra/4.png" height="200"></td>
+  </tr>
+</table>
 
-SSL
+---
 
-containers isolados
-
-deploy full-cycle
-
-<div align="center"> <img src="assets/editora/infra/1.png" width="300"> <img src="assets/editora/infra/2.png" width="300"> <img src="assets/editora/infra/3.png" width="300"> <img src="assets/editora/infra/4.png" width="300"> </div>
-👑 Admin Panel
+# 👑 Admin Panel
 
 Painel estratégico para administradores da editora.
 
-Funcionalidades:
+**Funcionalidades:**
 
-gestão de usuários e permissões (RBAC)
+- gestão de usuários e permissões (RBAC)  
+- controle de conteúdos  
+- visão global do sistema  
+- métricas editoriais  
 
-controle de conteúdos
+<table>
+  <tr>
+    <td align="center"><img src="assets/editora/admin/1.png" height="240"></td>
+    <td align="center"><img src="assets/editora/admin/2.png" height="240"></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/editora/admin/3.png" height="240"></td>
+    <td align="center"><img src="assets/editora/admin/4.png" height="240"></td>
+  </tr>
+</table>
 
-visão global do sistema
+---
 
-métricas editoriais
-
-<div align="center"> <img src="assets/editora/admin/1.png" width="300"> <img src="assets/editora/admin/2.png" width="300"> <img src="assets/editora/admin/3.png" width="300"> <img src="assets/editora/admin/4.png" width="300"> </div>
-👥 Employee Dashboard
+# 👥 Employee Dashboard
 
 Interface operacional para colaboradores editoriais.
 
-Fluxo de trabalho:
+**Fluxo de trabalho:**
 
-criação e edição de conteúdos
+- criação e edição de conteúdos  
+- gestão de ativos  
+- organização de publicações  
+- interação segura com API  
 
-gestão de ativos
+<table>
+  <tr>
+    <td align="center"><img src="assets/editora/employee/1.png" height="240"></td>
+    <td align="center"><img src="assets/editora/employee/2.png" height="240"></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/editora/employee/3.png" height="240"></td>
+    <td align="center"><img src="assets/editora/employee/4.png" height="240"></td>
+  </tr>
+</table>
 
-organização de publicações
+---
 
-interação com API segura
-
-<div align="center"> <img src="assets/editora/employee/1.png" width="300"> <img src="assets/editora/employee/2.png" width="300"> <img src="assets/editora/employee/3.png" width="300"> <img src="assets/editora/employee/4.png" width="300"> </div>
-🛍️ Client Storefront
+# 🛍️ Client Storefront
 
 Aplicação pública voltada ao leitor final.
 
-Funcionalidades:
+**Funcionalidades:**
 
-vitrine de publicações
+- vitrine de publicações  
+- autenticação de clientes  
+- biblioteca digital  
+- experiência otimizada para SEO  
 
-autenticação de clientes
+<table>
+  <tr>
+    <td align="center"><img src="assets/editora/client/1.png" height="240"></td>
+    <td align="center"><img src="assets/editora/client/2.png" height="240"></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/editora/client/3.png" height="240"></td>
+    <td align="center"><img src="assets/editora/client/4.png" height="240"></td>
+  </tr>
+</table>
 
-biblioteca digital
+---
 
-experiência otimizada para SEO
+# 🛠️ Stack Tecnológica
 
-<div align="center"> <img src="assets/editora/client/1.png" width="300"> <img src="assets/editora/client/2.png" width="300"> <img src="assets/editora/client/3.png" width="300"> <img src="assets/editora/client/4.png" width="300"> </div>
+| Camada | Tecnologias |
+|--------|------------|
+Backend | Node.js, TypeScript, Express, Prisma, Redis, Tsyringe |
+Frontend | Next.js, Next Auth, Chakra UI, Tailwind |
+Infra | Docker, Docker Compose, Nginx, Linux VPS, SSL |
+
+---
+
+# 👤 Autor
+
+**Tiago R. Becker**  
+Desenvolvedor Fullstack especializado em arquitetura escalável e engenharia full-cycle.
