@@ -13,10 +13,10 @@ A API foi construída sobre o padrão de **Arquitetura Hexagonal (Ports and Adap
 ### 🏗️ Estrutura e Arquitetura
 
 <div align="center">
-  <img src="assets/editora/api/1.png" width="45%" alt="Estrutura de Pastas">
-  <img src="assets/editora/api/2.png" width="45%" alt="Injeção de Dependência">
-    <img src="assets/editora/api/3.png" width="45%" alt="Estrutura de Pastas">
-  <img src="assets/editora/api/4.png" width="45%" alt="Injeção de Dependência">
+  <img src="assets/editora/api/1.png" width="45px" alt="Estrutura de Pastas">
+  <img src="assets/editora/api/2.png" width="45px" alt="Injeção de Dependência">
+    <img src="assets/editora/api/3.png" width="45px" alt="Estrutura de Pastas">
+  <img src="assets/editora/api/4.png" width="45px" alt="Injeção de Dependência">
 </div>
 
 ---
@@ -28,10 +28,10 @@ O ecossistema é totalmente containerizado com **Docker**, garantindo que a API,
 ### 🐳 Orquestração e Servidor
 
 <div align="center">
-  <img src="assets/editora/infra/1.png" width="90%" alt="Docker Status">
-  <img src="assets/editora/infra/2.png" width="90%" alt="Docker Status">
-  <img src="assets/editora/infra/3.png" width="90%" alt="Docker Status">
-  <img src="assets/editora/infra/4.png" width="90%" alt="Docker Status">
+  <img src="assets/editora/infra/1.png" width="300px" alt="Docker Status">
+  <img src="assets/editora/infra/2.png" width="300px" alt="Docker Status">
+  <img src="assets/editora/infra/3.png" width="300px" alt="Docker Status">
+  <img src="assets/editora/infra/4.png" width="300px" alt="Docker Status">
 </div>
 
 ---
@@ -43,10 +43,10 @@ Interface desenvolvida em **Next.js** e **Chakra UI** para gestão de alto níve
 ### 🕹️ Interface Administrativa
 
 <div align="center">
-  <img src="assets/editora/admin/1.png" width="90%" alt="Admin Dashboard">
-    <img src="assets/editora/admin/2.png" width="90%" alt="Admin Dashboard">
-      <img src="assets/editora/admin/3.png" width="90%" alt="Admin Dashboard">
-        <img src="assets/editora/admin/4.png" width="90%" alt="Admin Dashboard">
+  <img src="assets/editora/admin/1.png" width="300px" alt="Admin Dashboard">
+    <img src="assets/editora/admin/2.png" width="300px" alt="Admin Dashboard">
+      <img src="assets/editora/admin/3.png" width="300px" alt="Admin Dashboard">
+        <img src="assets/editora/admin/4.png" width="300px" alt="Admin Dashboard">
 
 </div>
 
@@ -59,10 +59,10 @@ Módulo focado no fluxo de trabalho diário dos colaboradores. Prioriza a produt
 ### 🛠️ Workflow Operacional
 
 <div align="center">
-  <img src="assets/editora/employee/1.png" width="90%" alt="Listagem de Tarefas">
-  <img src="assets/editora/employee/2.png" width="90%" alt="Listagem de Tarefas">
-  <img src="assets/editora/employee/3.png" width="90%" alt="Listagem de Tarefas">
-  <img src="assets/editora/employee/4.png" width="90%" alt="Listagem de Tarefas">
+  <img src="assets/editora/employee/1.png" width="300px"  alt="Listagem de Tarefas">
+  <img src="assets/editora/employee/2.png" width="300px" alt="Listagem de Tarefas">
+  <img src="assets/editora/employee/3.png" width="300px" alt="Listagem de Tarefas">
+  <img src="assets/editora/employee/4.png" width="300px" alt="Listagem de Tarefas">
 </div>
 
 ---
@@ -74,10 +74,10 @@ A vitrine final para o público, focada em conversão, performance e **SEO**. Ut
 ### 🌐 Experiência do Usuário
 
 <div align="center">
-  <img src="assets/editora/client/1.png" width="90%" alt="Storefront Hero">
-    <img src="assets/editora/client/2.png" width="90%" alt="Storefront Hero">
-      <img src="assets/editora/client/3.png" width="90%" alt="Storefront Hero">
-        <img src="assets/editora/client/4.png" width="90%" alt="Storefront Hero">
+  <img src="assets/editora/client/1.png" width="300px" alt="Storefront Hero">
+    <img src="assets/editora/client/2.png" width="300px" alt="Storefront Hero">
+      <img src="assets/editora/client/3.png" width="300px" alt="Storefront Hero">
+        <img src="assets/editora/client/4.png" width="300px" alt="Storefront Hero">
 </div>
 
 ---
