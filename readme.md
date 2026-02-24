@@ -1,167 +1,118 @@
-# 📚 Editorial SaaS Ecosystem
+Plataforma Editorial Multi-Aplicação (Case)
 
-Plataforma editorial completa composta por **API central + 3 aplicações independentes**:
+Sistema completo para gestão editorial composto por múltiplas aplicações integradas, incluindo API backend, painel administrativo, portal do cliente e aplicação operacional interna.
 
-- 👑 Admin (gestão estratégica)
-- 👥 Colaborador (produção editorial)
-- 🛍️ Cliente (consumo e compras)
+O projeto foi desenvolvido com foco em escalabilidade, separação de responsabilidades e manutenibilidade, utilizando arquitetura hexagonal e injeção de dependências.
 
-Sistema desenvolvido para editora real, cobrindo todo o ciclo:
+⚠️ O código-fonte deste projeto permanece privado por confidencialidade contratual.
+Este repositório apresenta a arquitetura, decisões técnicas e visão geral do sistema.
 
-**gestão → produção → publicação → venda → acesso digital**
+Arquitetura
 
----
+O backend foi estruturado seguindo arquitetura hexagonal (Ports and Adapters), isolando completamente as regras de negócio das camadas de infraestrutura e interface.
 
-## 🔒 Status do projeto
+Camadas principais:
 
-Projeto finalizado para cliente real, porém descontinuado antes do lançamento em produção.
+Domain — entidades e regras de negócio
 
-Por se tratar de software proprietário, o código-fonte não é público.
+Application — casos de uso
 
-📩 Recrutadores podem solicitar:
-- acesso ao repositório privado  
-- demonstração guiada  
-- apresentação técnica  
+Infrastructure — banco de dados e integrações
 
----
+HTTP — controllers e rotas
 
-# ⚙️ Backend API (Arquitetura Hexagonal)
+DI Container — injeção de dependências com Tsyringe
 
-API central construída em **Arquitetura Hexagonal (Ports & Adapters)**, com domínio isolado de frameworks.
+Essa abordagem permite:
 
-**Responsabilidades principais:**
+baixo acoplamento
 
-- autenticação e RBAC  
-- gestão editorial  
-- publicações digitais  
-- vendas e acesso do cliente  
-- integração entre aplicações  
+alta testabilidade
 
-Tecnologias: Node.js, TypeScript, Prisma, Redis, Tsyringe.
+facilidade de evolução
 
-### 🏗️ Estrutura e Arquitetura
+independência de frameworks
 
-<table>
-  <tr>
-    <td align="center"><img src="assets/editora/api/1.png" height="220"></td>
-    <td align="center"><img src="assets/editora/api/2.png" height="220"></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="assets/editora/api/3.png" height="220"></td>
-    <td align="center"><img src="assets/editora/api/4.png" height="220"></td>
-  </tr>
-</table>
+Aplicações do Ecossistema
 
----
+O sistema é composto por quatro aplicações independentes:
 
-# 🛡️ Infraestrutura & DevOps
+API — backend central e regras de negócio
 
-Ecossistema totalmente containerizado com Docker e orquestrado via Docker Compose.
+Admin — painel administrativo
 
-**Ambiente:**
+Client — portal do cliente
 
-- VPS Linux  
-- Nginx reverse proxy  
-- SSL  
-- containers isolados  
-- deploy full-cycle  
+Employee — aplicação operacional interna
 
-<table>
-  <tr>
-    <td align="center"><img src="assets/editora/infra/1.png" height="200"></td>
-    <td align="center"><img src="assets/editora/infra/2.png" height="200"></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="assets/editora/infra/3.png" height="200"></td>
-    <td align="center"><img src="assets/editora/infra/4.png" height="200"></td>
-  </tr>
-</table>
+Todas consomem a mesma API, garantindo consistência e centralização das regras.
 
----
+Stack Tecnológica
+Backend
 
-# 👑 Admin Panel
+Node.js
 
-Painel estratégico para administradores da editora.
+Express
 
-**Funcionalidades:**
+TypeScript
 
-- gestão de usuários e permissões (RBAC)  
-- controle de conteúdos  
-- visão global do sistema  
-- métricas editoriais  
+Tsyringe (DI)
 
-<table>
-  <tr>
-    <td align="center"><img src="assets/editora/admin/1.png" height="240"></td>
-    <td align="center"><img src="assets/editora/admin/2.png" height="240"></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="assets/editora/admin/3.png" height="240"></td>
-    <td align="center"><img src="assets/editora/admin/4.png" height="240"></td>
-  </tr>
-</table>
+Prisma ORM
 
----
+Banco relacional
 
-# 👥 Employee Dashboard
+Arquitetura Hexagonal
 
-Interface operacional para colaboradores editoriais.
+Frontend
 
-**Fluxo de trabalho:**
+Next.js
 
-- criação e edição de conteúdos  
-- gestão de ativos  
-- organização de publicações  
-- interação segura com API  
+React
 
-<table>
-  <tr>
-    <td align="center"><img src="assets/editora/employee/1.png" height="240"></td>
-    <td align="center"><img src="assets/editora/employee/2.png" height="240"></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="assets/editora/employee/3.png" height="240"></td>
-    <td align="center"><img src="assets/editora/employee/4.png" height="240"></td>
-  </tr>
-</table>
+Tailwind CSS / Chakra UI
 
----
+Funcionalidades Principais
 
-# 🛍️ Client Storefront
+Autenticação e controle de acesso
 
-Aplicação pública voltada ao leitor final.
+Gestão editorial
 
-**Funcionalidades:**
+Gerenciamento de conteúdos
 
-- vitrine de publicações  
-- autenticação de clientes  
-- biblioteca digital  
-- experiência otimizada para SEO  
+Painel administrativo
 
-<table>
-  <tr>
-    <td align="center"><img src="assets/editora/client/1.png" height="240"></td>
-    <td align="center"><img src="assets/editora/client/2.png" height="240"></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="assets/editora/client/3.png" height="240"></td>
-    <td align="center"><img src="assets/editora/client/4.png" height="240"></td>
-  </tr>
-</table>
+Portal do cliente
 
----
+Fluxos operacionais internos
 
-# 🛠️ Stack Tecnológica
+Integração entre múltiplas aplicações
 
-| Camada | Tecnologias |
-|--------|------------|
-Backend | Node.js, TypeScript, Express, Prisma, Redis, Tsyringe |
-Frontend | Next.js, Next Auth, Chakra UI, Tailwind |
-Infra | Docker, Docker Compose, Nginx, Linux VPS, SSL |
+Decisões Técnicas Relevantes
 
----
+Arquitetura hexagonal para isolamento de domínio
 
-# 👤 Autor
+Injeção de dependências para desacoplamento
 
-**Tiago R. Becker**  
-Desenvolvedor Fullstack especializado em arquitetura escalável e engenharia full-cycle.
+Separação por módulos de negócio
+
+Backend centralizado para múltiplos clientes
+
+Camada de aplicação independente de framework
+
+Aprendizados Técnicos
+
+Modelagem de domínio editorial
+
+Estruturação de backend escalável em Node.js
+
+Organização de monorepo multi-aplicação
+
+Aplicação prática de Ports and Adapters
+
+Gestão de dependências em TypeScript
+
+Autor
+
+Tiago Becker
+Desenvolvedor Backend / Fullstack
