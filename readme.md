@@ -16,9 +16,6 @@
 ---
 
 ## ⚠️ Status do Projeto
-
-Este projeto **não está online no momento**. O desenvolvimento foi interrompido porque o cliente deixou de dar retorno durante o processo — o sistema não chegou a ir ao ar em produção com usuários reais, embora estivesse funcionalmente avançado e com ambiente de deploy via Docker já preparado.
-
 O repositório é **privado**. Este README documenta a arquitetura e os principais módulos implementados, com trechos de código reais extraídos do projeto.
 
 ---
